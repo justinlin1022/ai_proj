@@ -10,6 +10,9 @@ import ConfigModify from 'admin/views/configManage/ConfigModify';
 import ManageList from 'admin/views/manageList/ManageList';
 import RightList from 'admin/views/rightList/RightList';
 
+// 机器人基本设置
+import RobotBasicSetup from 'admin/views/robotBasicSetup/RobotBasicSetup';
+
 // 模板文件
 import List from 'admin/views/templates/List';
 import Modify from 'admin/views/templates/Modify';
@@ -27,7 +30,7 @@ let routes = [
         { path: 'list', name: 'list', component: List },
         { path: 'modify', name: 'modify', component: Modify }
     ] },
-    { path: '/adminfront', name: 'adminfront', component: AdminFront, children: [
+    { path: '/adminpage', name: 'adminpage', component: AdminFront, children: [
         { path: 'home', name: 'home', component: Home },
         { path: 'configList', name: 'configList', component: ConfigList },
         { path: 'configModify', name: 'configModify', component: ConfigModify },
@@ -35,7 +38,9 @@ let routes = [
         { path: 'manageList', name: 'manageList', component: ManageList },
         { path: 'rightList', name: 'rightList', component: RightList },
         { path: 'list', name: 'list', component: List },
-        { path: 'modify', name: 'modify', component: Modify }
+        { path: 'modify', name: 'modify', component: Modify },
+
+        { path: 'robotbasicsetup', name: 'robotbasicsetup', component: RobotBasicSetup }
     ] },
     { path: '*', name: 'notfound', component: NotFound }
 ]
